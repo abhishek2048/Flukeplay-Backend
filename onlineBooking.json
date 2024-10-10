@@ -1,0 +1,21 @@
+
+[
+    {
+        "userId": "657a96e37295220e1ae231d1",
+        "professionalId": "658d062510fb38d0acb80986",
+        "bookingDate": "2023-12-28T05:22:45.571+00:00",
+        "duration": 30,
+        "bookingAmt": 379,
+        "sessionDate": "2023-12-28T05:23:45.571+00:00",
+        "sessionStatus": false 
+    },
+    {
+        "userId": "657a96e37295220e1ae231d1",
+        "professionalId": "658d062510fb38d0acb8098a",
+        "bookingDate": "2023-12-28T05:21:45.571+00:00",
+        "duration": 30,
+        "bookingAmt": 379,
+        "sessionDate": "2023-12-28T05:21:45.571+00:00",
+        "sessionStatus": false 
+    }
+]

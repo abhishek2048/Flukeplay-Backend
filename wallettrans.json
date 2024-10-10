@@ -1,0 +1,28 @@
+
+[
+    {
+    "userId": "657a96e37295220e1ae231d0",
+    "transAmt": 1100,
+    "transDate": "2023-12-14T05:47:14.216+00:00",
+    "walletBalance": 2100
+},
+{
+    "userId": "657a96e37295220e1ae231d0",
+    "transAmt": 900,
+    "transDate": "2023-12-14T05:47:15.216+00:00",
+    "walletBalance":3000
+},
+{
+    "userId": "657a96e37295220e1ae231d0",
+    "transAmt": "800",
+    "transDate": "2023-12-14T05:47:16.216+00:00",
+    "walletBalance":"3800"
+},
+{
+    "userId": "657a96e37295220e1ae231d0",
+    "transAmt": "700",
+    "transDate": "2023-12-14T05:48:14.216+00:00",
+    "walletBalance":"4500"
+}
+
+]

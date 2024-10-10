@@ -1,0 +1,835 @@
+{
+    "info": {
+        "_postman_id": "a02465ee-b8c8-4f14-8485-51760e63e210",
+        "name": "wellness warrior",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "user routes",
+            "item": [
+                {
+                    "name": "booking route",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/book",
+                            "path": [
+                                "api",
+                                "user",
+                                "book"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"userBalance\": \"40\",\n  \"psychologistId\": \"659d10c425ecf7b65f030dc4\",\n  \"duration\": \"30\",\n  \"amount\": 29000,\n  \"date\": \"2024-02-10\",\n  \"meetLink\" : \"https://meet.google.com/fnf-kaza-oee\",\n  \"paymentId\" : \"sljfafdf\"\n}\n"
+                        }
+                    }
+                },
+                {
+                    "name": "get all users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user",
+                            "query": [
+                                {
+                                    "key": "referralId",
+                                    "value": "659592b304372c1e04de9452",
+                                    "disabled": true
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/register",
+                            "query": [
+                                {
+                                    "key": "referralId",
+                                    "value": "659592b304372c1e04de9454",
+                                    "disabled": true
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "user",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\" : \"akshattt\",\n  \"email\" : \"latestUser@gmail.com\",\n  \"password\" : \"123456\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "recharge",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/wallet",
+                            "path": [
+                                "api",
+                                "user",
+                                "wallet"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"amount\" : 10040,\n  \"date\" : \"2024-01-03\", \n  \"type\" : \"UPI\", \n  \"paymentId\" : 4890235\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login via email",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/login",
+                            "path": [
+                                "api",
+                                "user",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\" : \"latestUser@gmail.com\",\n  \"password\" : \"123456\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login with google",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/auth/google",
+                            "path": [
+                                "auth",
+                                "google"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "get user profile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/profile",
+                            "path": [
+                                "api",
+                                "user",
+                                "profile"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "Get wallet balance",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/wallet",
+                            "path": [
+                                "api",
+                                "user",
+                                "wallet"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "get user sessions",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/sessions",
+                            "path": [
+                                "api",
+                                "user",
+                                "sessions"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "view user transactions",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/transactions",
+                            "path": [
+                                "api",
+                                "user",
+                                "transactions"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "view booking history",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/book",
+                            "path": [
+                                "api",
+                                "user",
+                                "book"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "logout user",
+                    "request": {
+                        "method": "GET"
+                    }
+                },
+                {
+                    "name": "get reviews by the user",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/reviews",
+                            "path": [
+                                "api",
+                                "user",
+                                "reviews"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "post review for a psychologist",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/reviews",
+                            "path": [
+                                "api",
+                                "user",
+                                "reviews"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"psychologistId\" : \"659fc99dc25f3cd843a4a42c\",\n  \"stars\" : 3,\n  \"review\" : \"Very bad psychologist\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "delete a review",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/reviews?reviewId=659fc9cfc25f3cd843a4a432",
+                            "query": [
+                                {
+                                    "key": "reviewId",
+                                    "value": "659fc9cfc25f3cd843a4a432"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "user",
+                                "reviews"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "edit review",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:9008/api/user/reviews?reviewId=659fcf6ca1ad1729d0e5705b",
+                            "query": [
+                                {
+                                    "key": "reviewId",
+                                    "value": "659fcf6ca1ad1729d0e5705b"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "user",
+                                "reviews"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"stars\" : 0,\n  \"review\" : \"Very bad psychologist\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "psychologist route",
+            "item": [
+                {
+                    "name": "register psychologist",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/register",
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"akshat\",\n\"email\" : \"latest@gmail.com\",\n\"password\" : \"024024\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login with google",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/auth/google",
+                            "path": [
+                                "auth",
+                                "google"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "get all psychologist",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist",
+                            "path": [
+                                "api",
+                                "psychologist"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "login psychologist without google",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/login",
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n\n\"email\" : \"prince@gmail.com\",\n\"password\" : \"024024\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "get psychologist profile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/profile?psychologistId=659fc99dc25f3cd843a4a42c",
+                            "query": [
+                                {
+                                    "key": "psychologistId",
+                                    "value": "659fc99dc25f3cd843a4a42c"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "profile"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "get psychologist shedule on a date",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/schedule?psychologistId=6598997ad730939f3d5095b8&date=2024-01-03",
+                            "query": [
+                                {
+                                    "key": "psychologistId",
+                                    "value": "6598997ad730939f3d5095b8"
+                                },
+                                {
+                                    "key": "date",
+                                    "value": "2024-01-03"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "schedule"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "\n  {\n  \"psychologistId\": \"6598997ad730939f3d5095b8\",\n  \"date\": \"2024-01-03\"\n  \n}\n"
+                        }
+                    }
+                },
+                {
+                    "name": "update psychologist shedule on a date",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/schedule",
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "schedule"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "\n  {\n  \"psychologistId\": \"6598997ad730939f3d5095b8\",\n  \"date\": \"2024-01-03\",\n  \"slot\" : \"08:00 AM\",\n  \"availability\" : false\n}\n"
+                        }
+                    }
+                },
+                {
+                    "name": "update psychologist details",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/profile",
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "profile"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"about\" : \"nothing\",\n\"qualification\" : \"BE\",\n\"psychologistId\" : \"6598997ad730939f3d5095b8\"}"
+                        }
+                    }
+                },
+                {
+                    "name": "fetch all sessions of a psychologist",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/sessions?id=659d10c425ecf7b65f030dc4",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "659d10c425ecf7b65f030dc4"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "sessions"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "fetch reviews of a psychologist",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/reviews?psychologistId=659fc99dc25f3cd843a4a42c",
+                            "query": [
+                                {
+                                    "key": "psychologistId",
+                                    "value": "659fc99dc25f3cd843a4a42c"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "reviews"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "average rating of a psychologist",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/psychologist/rating?psychologistId=659fc99dc25f3cd843a4a42c",
+                            "query": [
+                                {
+                                    "key": "psychologistId",
+                                    "value": "659fc99dc25f3cd843a4a42c"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "psychologist",
+                                "rating"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "auth routes",
+            "item": [
+                {
+                    "name": "google sign in",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/auth/google",
+                            "path": [
+                                "auth",
+                                "google"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "logout",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/auth/logout",
+                            "path": [
+                                "auth",
+                                "logout"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "payment routes",
+            "item": [
+                {
+                    "name": "fetch stripe api key",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/payment/api-key",
+                            "path": [
+                                "api",
+                                "payment",
+                                "api-key"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                },
+                {
+                    "name": "process payment",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/payment/process",
+                            "path": [
+                                "api",
+                                "payment",
+                                "process"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"amount\" : 100,\n  \"psychologistId\" : \"659d10c425ecf7b65f030dc4\",\n  \"userId\" : \"659ac35bdb7e41b283b78e26\",\n  \"name\" : \"Name\",\n  \"email\" : \"Email\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "session routes",
+            "item": [
+                {
+                    "name": "create sessiono meet link",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:9008/api/session/link",
+                            "path": [
+                                "api",
+                                "session",
+                                "link"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"sessionId\" : \"659d4954885bca2f61163b34\",\n  \"meetLink\" : \"alskdfllkflf\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "get session details",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:9008/api/session?id=659d4954885bca2f61163b34",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "659d4954885bca2f61163b34"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "session"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "9008"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
